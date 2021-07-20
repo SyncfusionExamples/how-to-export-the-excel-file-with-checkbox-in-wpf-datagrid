@@ -1,0 +1,36 @@
+﻿<Window x:Class="SfDataGridDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"         
+        xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
+        xmlns:local="clr-namespace:SfDataGridDemo"
+        Title="SfDataGrid Demo"       
+        Icon="App.ico"
+        Height="350"
+        Width="1100"
+        WindowStartupLocation="CenterScreen" >
+    <Window.DataContext>
+        <local:ViewModel/> 
+    </Window.DataContext>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="170"/>
+        </Grid.ColumnDefinitions>
+        <syncfusion:SfDataGrid x:Name="sfDataGrid"                                
+                               AllowEditing="True"
+                               ItemsSource="{Binding Orders}"
+                               AutoGenerateColumns="False">
+            <syncfusion:SfDataGrid.Columns>
+                <syncfusion:GridTextColumn MappingName="OrderID" HeaderText="Order ID" />
+                <syncfusion:GridTextColumn MappingName="CustomerID" HeaderText="Customer ID" />
+                <syncfusion:GridTextColumn MappingName="CustomerName" HeaderText="Customer Name" />
+                <syncfusion:GridTextColumn MappingName="Country" HeaderText="Country" />
+                <syncfusion:GridTextColumn MappingName="UnitPrice" HeaderText="Unit Price" />
+                <syncfusion:GridCheckBoxColumn MappingName="IsShipped" HeaderText="Is Shipped" />
+            </syncfusion:SfDataGrid.Columns>
+        </syncfusion:SfDataGrid>
+        <StackPanel Grid.Column="1">
+            <Button x:Name="btnExportToExcel" Content="Export To Excel" Width="150" Height="50" Click="btnExportToExcel_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
