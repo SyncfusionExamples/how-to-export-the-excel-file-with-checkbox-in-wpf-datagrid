@@ -75,5 +75,7 @@ The following screenshot shows the exported excel file with a checkbox,
 
 Take a moment to peruse the [WPF DataGrid – Export to Excel](https://help.syncfusion.com/wpf/datagrid/export-to-excel) documentation, where you can find about export to excel with code examples.
 
+KB article - [How to Export the excel file with checkbox in WPF DataGrid (SfDataGid)?](https://www.syncfusion.com/kb/12761/how-to-export-the-excel-file-with-checkbox-in-wpf-datagrid-sfdatagid)
+
 ## Requirements to run the demo
 Visual Studio 2015 and above versions
